@@ -28,7 +28,7 @@ class App extends Component {
                 <img src={logo} width="50" height="50" alt="" style = {{marginRight: '20px'}}/>
                 Caffinate & Dominate
               </a>
-              <button type="button" className="navbar-toggle d-lg-none" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavBar" aria-expanded="false" aria-label="Toggle navigation">
+              <button type="button" className="navbar-toggle d-lg-none"  style = {{backgroundColor: 'black', borderColor: 'black'}}data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>                       
               </button>
             <div className="collpase navbar-collapse" id='myNavbar'>
