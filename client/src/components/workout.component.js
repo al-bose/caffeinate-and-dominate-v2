@@ -32,7 +32,7 @@ export default class WorkoutPage extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://caffeinate-and-dominate.herokuapp.com/workouts/')
+        axios.get('//caffeinate-and-dominate.herokuapp.com/workouts/')
         .then(response => {
             this.setState({ workouts: response.data });
         })
@@ -56,7 +56,7 @@ export default class WorkoutPage extends Component {
     handleDelete(e,id) {
         e.preventDefault();
 
-        axios.delete('http://caffeinate-and-dominate.herokuapp.com/workouts/delete/'+id)
+        axios.delete('//caffeinate-and-dominate.herokuapp.com/workouts/delete/'+id)
             .then(res => {console.log(res)})
 
             var new_workouts= this.state.workouts.filter(function(workout){
