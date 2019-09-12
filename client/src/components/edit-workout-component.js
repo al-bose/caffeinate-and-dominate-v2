@@ -21,7 +21,7 @@ export default class EditWorkout extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://caffeinate-and-dominate.herokuapp.com/workouts/'+this.props.match.params.id)
+        axios.get('//caffeinate-and-dominate.herokuapp.com/workouts/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     workout_name: response.data.workout_name,
@@ -46,7 +46,7 @@ export default class EditWorkout extends Component {
     
             };
     
-            axios.post('http://caffeinate-and-dominate.herokuapp.com/workouts/update/'+this.props.match.params.id, newWorkout)
+            axios.post('//caffeinate-and-dominate.herokuapp.com/workouts/update/'+this.props.match.params.id, newWorkout)
                 .then(res => console.log(res.data));
 
 
