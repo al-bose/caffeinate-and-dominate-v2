@@ -14,7 +14,7 @@ export default class LiftHistory extends Component {
     };
 
     componentDidMount(){
-        axios.get('http://localhost:4000/lifts/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/lifts/')
             .then(response => {
                 this.setState({ lifts: response.data });
             })
@@ -26,7 +26,7 @@ export default class LiftHistory extends Component {
 
     handleDelete(e,id){
         e.preventDefault();
-        axios.delete('http://localhost:4000/lifts/delete/'+id)
+        axios.delete('http://caffeinate-and-dominate.herokuapp.com/lifts/delete/'+id)
             .then(res => {console.log(res)})
 
         var new_lifts= this.state.lifts.filter(function(lift){
