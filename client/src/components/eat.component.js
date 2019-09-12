@@ -31,7 +31,7 @@ export default class EatPage extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/meals/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/meals/')
         .then(response => {
             this.setState({ meals: response.data });
         })
@@ -76,7 +76,7 @@ export default class EatPage extends Component {
 
     handleDelete(e,id){
         e.preventDefault();
-        axios.delete('http://localhost/meals/delete/'+id)
+        axios.delete('http://caffeinate-and-dominate.herokuapp.com/meals/delete/'+id)
             .then(res => {console.log(res)})
 
             var new_meals= this.state.meals.filter(function(meal){
@@ -112,7 +112,7 @@ export default class EatPage extends Component {
         e.preventDefault();
         console.log('here')
 
-        axios.get('http://localhost:4000/meals/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/meals/')
         .then(response => {
             this.setState({ meals: response.data });
         })
@@ -133,10 +133,10 @@ export default class EatPage extends Component {
             meal_protein: this.state.current_protein
         };
 
-        axios.post('http://localhost:4000/meals/add', newMeal)
+        axios.post('http://caffeinate-and-dominate.herokuapp.com/meals/add', newMeal)
             .then(res => console.log(res.data));
 
-        axios.get('http://localhost:4000/meals/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/meals/')
             .then(response => {
                 this.setState({ meals: response.data });
             })
