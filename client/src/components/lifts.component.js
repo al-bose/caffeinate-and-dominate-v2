@@ -27,7 +27,7 @@ export default class Lifts extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:4000/lifts/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/lifts/')
             .then(response => {
                 this.setState({ lifts: response.data });
             })
@@ -38,7 +38,7 @@ export default class Lifts extends Component {
 
     displayChart(e){
         e.preventDefault();
-        axios.get('http://localhost:4000/lifts/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/lifts/')
         .then(response => {
             this.setState({ lifts: response.data });
         })
@@ -90,7 +90,7 @@ export default class Lifts extends Component {
             date: this.state.date
         };
 
-        axios.post('http://localhost:4000/lifts/add', newLift)
+        axios.post('http://caffeinate-and-dominate.herokuapp.com/lifts/add', newLift)
             .then(res => console.log(res.data));
 
         this.setState({
