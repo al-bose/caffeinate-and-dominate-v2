@@ -31,7 +31,7 @@ export default class Nutrition extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://172.31.11.178:4000/nutrition/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/nutrition/')
             .then(response => {
                 this.setState({ nutrition: response.data });
             })
@@ -42,7 +42,7 @@ export default class Nutrition extends Component {
 
     displayChart(e){
         e.preventDefault();
-        axios.get('http://172.31.11.178:4000/nutrition/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/nutrition/')
         .then(response => {
             this.setState({ nutrition: response.data });
         })
@@ -104,11 +104,11 @@ export default class Nutrition extends Component {
             date: this.state.date
         };
 
-        axios.post('http://localhost:4000/nutrition/add', newNutrition)
+        axios.post('http://caffeinate-and-dominate.herokuapp.com/nutrition/add', newNutrition)
             .then(res => console.log(res.data));
 
 
-        axios.get('http://1localhost:4000/nutrition/')
+        axios.get('http://caffeinate-and-dominate.herokuapp.com/nutrition/')
             .then(response => {
                 this.setState({ nutrition: response.data });
             })
