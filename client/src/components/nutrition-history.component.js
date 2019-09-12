@@ -14,7 +14,7 @@ export default class NutritionHistory extends Component {
     };
 
     componentDidMount(){
-        axios.get('http://localhost:4000/nutrition/')
+        axios.get('https://caffeinate-and-dominate.herokuapp.com/nutrition/')
             .then(response => {
                 this.setState({ nutrition: response.data });
             })
@@ -26,7 +26,7 @@ export default class NutritionHistory extends Component {
 
     handleDelete(e,id){
         e.preventDefault();
-        axios.delete('http://localhost:4000/nutrition/delete/'+id)
+        axios.delete('https://caffeinate-and-dominate.herokuapp.com/delete/'+id)
             .then(res => {console.log(res)})
 
         var new_nutrition= this.state.nutrition.filter(function(current){
