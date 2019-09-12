@@ -35,7 +35,7 @@ export default class AddWorkout extends Component {
 
         };
 
-        axios.post('http://localhost:4000/workouts/add', newWorkout)
+        axios.post('http://caffeinate-and-dominate.herokuapp.com/workouts/add', newWorkout)
             .then(res => console.log(res.data));
 
         this.setState({
