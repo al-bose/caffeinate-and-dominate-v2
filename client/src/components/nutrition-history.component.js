@@ -26,7 +26,7 @@ export default class NutritionHistory extends Component {
 
     handleDelete(e,id){
         e.preventDefault();
-        axios.delete('//caffeinate-and-dominate.herokuapp.com/delete/'+id)
+        axios.delete('//caffeinate-and-dominate.herokuapp.com/nutrition/delete/'+id)
             .then(res => {console.log(res)})
 
         var new_nutrition= this.state.nutrition.filter(function(current){
